@@ -1,9 +1,12 @@
 ---
 - name: copy test
   hosts: yc0227client2
-  sudo: yes
-  sudo_user: root
   gather_facts: no
+  vars:
+    - ansible_become: yes
+    - ansible_become_method: runas
+    - ansible_become_user: administrator
+    - ansible_become_pass: Password..1
   
   tasks:
     - name: copy a file
