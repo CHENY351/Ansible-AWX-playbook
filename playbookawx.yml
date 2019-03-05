@@ -6,5 +6,5 @@
   tasks:
     - name: copy a file
       win_copy:
-        src: /home/reboot.sh
+        src: /home/administrator/reboot.sh
         dest: C:\
