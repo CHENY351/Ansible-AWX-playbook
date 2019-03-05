@@ -1,0 +1,10 @@
+---
+- name: copy test
+  hosts: new
+  gather_facts: no
+  
+  tasks:
+    - name: copy a file
+      win_copy:
+        src: /home/reboot.sh
+        dest: C:\
