@@ -1,6 +1,6 @@
 ---
 - name: copy test
-  hosts: win
+  hosts: yc0227client2
   gather_facts: no
   
   tasks:
