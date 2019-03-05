@@ -11,5 +11,5 @@
   tasks:
     - name: copy a file
       win_copy:
-        src: /home/administrator/reboot.sh
+        remote_src: /home/administrator/reboot.sh
         dest: C:\
