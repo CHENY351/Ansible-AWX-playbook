@@ -8,7 +8,7 @@
     - ansible_become_user: administrator
     - ansible_become_pass: Password..1
   
- tasks:
+  tasks:
 #    - name: copy a file
 #      win_copy:
 #        remote_src: True
@@ -16,22 +16,22 @@
 #        src: /home/administrator/reboot.sh
 #        dest: C:\
 
-   - name: install firebox
+    - name: install firebox
       win_chocolatey:
         name: firefox
         state: present
        
  #IIS features
-   - name: iis features
-     win_feature:
-       name:
-         - Web-Server
-         - Web-Common-Http
-       state: present
-       include_sub_features: yes
-       include_management_tools: yes
-     register: win_feature
+    - name: iis features
+      win_feature:
+        name:
+          - Web-Server
+          - Web-Common-Http
+        state: present
+        include_sub_features: yes
+        include_management_tools: yes
+      register: win_feature
   
-   - name: reboot
-     win_reboot:
-     when: win_feature.reboot_required
+    - name: reboot
+      win_reboot:
+      when: win_feature.reboot_required
