@@ -1,6 +1,6 @@
 ---
 - name: copy test
-  hosts: win
+  hosts: Windows
   gather_facts: no
   vars:
     - ansible_become: yes
