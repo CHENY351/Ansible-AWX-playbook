@@ -1,6 +1,6 @@
 ---
 - name: copy test
-  hosts: new
+  hosts: win
   gather_facts: no
   
   tasks:
