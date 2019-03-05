@@ -1,6 +1,8 @@
 ---
 - name: copy test
   hosts: yc0227client2
+  sudo: yes
+  sudo_user: root
   gather_facts: no
   
   tasks:
