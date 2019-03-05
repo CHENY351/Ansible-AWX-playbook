@@ -1,6 +1,6 @@
 ---
 - name: copy test
-  hosts: Windows
+  hosts: yc0227client2
   gather_facts: no
   vars:
     - ansible_become: yes
