@@ -9,9 +9,14 @@
     - ansible_become_pass: Password..1
   
   tasks:
-    - name: copy a file
-      win_copy:
-        remote_src: True
-        local_follow: False
-        src: /home/administrator/reboot.sh
-        dest: C:\
+#    - name: copy a file
+#      win_copy:
+#        remote_src: True
+#        local_follow: False
+#        src: /home/administrator/reboot.sh
+#        dest: C:\
+
+    - name: install firebox
+      win_chocolatey:
+        name: firefox
+        state: present
