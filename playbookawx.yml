@@ -16,7 +16,7 @@
 #        src: /home/administrator/reboot.sh
 #        dest: C:\
 
-    - name: install firebox
+    - name: install firefox
       win_chocolatey:
         name: firefox
         state: present
